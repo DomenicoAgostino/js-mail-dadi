@@ -28,12 +28,36 @@ for ( let i = 0; i < email.length; i++) {
 
 
 if(mailRegistrata){
-  loginMail = "Utente Loggato";
+  loginMail = "Eccoti! Pronto per Inizare? GL";
 } else {
-  loginMail = "Utente Non Registrato"
+  loginMail = "Devi prima registrarti per accedere ai nostri giochi. Che cosa aspetti?"
 }
 
 document.getElementById("login").innerHTML = loginMail;
 
 
+
+// Gioco dei dadi
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+
+
+const play1 = Math.floor(Math.random() * 6) + 1;
+const play2 = Math.ceil(Math.random() * 6);
+
+let avviso;
+
+if(play1 > play2){
+  avviso = "Ha vinto il player 1";
+}else if(play2 > play1){
+  avviso = "Ha vinto il player 2";
+}else{
+  avviso = "Pari!!";
+}
+
+
+console.log('play1',play1);
+console.log('play2',play2);
+console.log(avviso);
 
